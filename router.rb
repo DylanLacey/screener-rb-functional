@@ -2,6 +2,8 @@ require "rubygems"
 require "sinatra"
 require "haml"
 
-get "/" do
-  haml :index
+class DylanTonic < Sinatra::Base
+  get "/" do
+    haml :index
+  end
 end
