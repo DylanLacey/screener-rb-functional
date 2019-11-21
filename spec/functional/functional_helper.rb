@@ -16,7 +16,11 @@ RSpec.configure do |config|
   end
 
   config.before(:example) do
-    @driver = SpecSupport.firefox_driver
+    begin
+      @driver = SpecSupport.screener_driver
+    rescue => e
+      puts e
+    end
   end
 
   config.after(:example) do
