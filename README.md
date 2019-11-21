@@ -7,3 +7,7 @@ This repo contains an example of a functional test suite integrated with [Screen
 This makes Screener a great tool for ensuring unrelated changes don't impact the look and feel of your site.
 
 Screener can be integrated into a standard functional test suite, which is what this repo demonstrates.
+
+# How?
+
+Computers.
