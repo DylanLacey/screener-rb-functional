@@ -40,10 +40,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  childprocess (~> 3.0.0)
   haml (~> 5.1.2)
   rake (~> 13.0.0)
   rspec (~> 3.9.0)
-  selenium-webdriver
+  selenium-webdriver (~> 3.142.0)
   sinatra (~> 2.0.0)
 
 BUNDLED WITH
