@@ -7,6 +7,7 @@ install:
   - curl -O https://s3-us-west-2.amazonaws.com/screener-files/ci/v2.1/screener-ci.zip
   - unzip -o screener-ci.zip
   - gem install bundler
+  - bundle install
 
 before_script:
   - curl -s https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip > ngrok.zip
