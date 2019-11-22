@@ -6,10 +6,11 @@ install:
   # Install Screener CI Script
   - curl -O https://s3-us-west-2.amazonaws.com/screener-files/ci/v2.1/screener-ci.zip
   - unzip -o screener-ci.zip
+  - gem install bundler
 
 before_script:
   - curl -s https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip > ngrok.zip
   - unzip ngrok.zip
   - ./ngrok http 3000 > /dev/null &
-  - sleep 2
+  - sleep 5
   - NGROK_URL=$(curl -s localhost:4040/api/tunnels/command_line | jq --raw-output .public_url)
