@@ -11,7 +11,7 @@ module SpecSupport
         browserName: "Chrome",
         screener: {
           name: "Twitch Index Page - Chrome",
-          build: ENV["TRAVIS_BUILD_NUMBER"] || "#{ENV["TRAVIS_BRANCH"]}_#{ENV["TRAVIS_JOB_NUMBER"]}"
+          build: ENV["TRAVIS_BUILD_NUMBER"] || "#{ENV["TRAVIS_BRANCH"]}_#{ENV["TRAVIS_JOB_NUMBER"]}",
           resolution: "1280x1024",
           apiKey: "c9ac4870-9f8f-4340-913d-9b6a0e6f67f3",
           group: "5dd61360d5a0b38e6404a93d"
