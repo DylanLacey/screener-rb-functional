@@ -10,4 +10,4 @@ Screener can be integrated into a standard functional test suite, which is what 
 
 # How?
 
-Computers.  Always DAMN Computers.  Forever.
+Computers.  Always Computers.  Forever.
