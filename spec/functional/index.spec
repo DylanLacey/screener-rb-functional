@@ -6,8 +6,8 @@ RSpec.describe "The index page" do
   end
 
   it "has a link to Twitch" do
-    @driver.navigate.to "http://localhost:3000/"
-    @driver.find_element :link_text, "Twitch!"
-    @driver.execute "/*@screener.snapshot*/", "Standard Home Page"
+    @driver.navigate.to "http://cashdeck.com/"
+    # @driver.find_element :link_text, "Twitch!"
+    @driver.execute_script "/*@screener.snapshot*/", "Standard Home Page"
   end
 end
