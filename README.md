@@ -12,4 +12,4 @@ Screener can be integrated into a standard functional test suite, which is what 
 
 Computers.  Always Computers.  Never Goats.
 
-Unless...
+Unless...  No.
