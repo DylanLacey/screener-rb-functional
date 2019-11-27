@@ -19,12 +19,14 @@ RSpec.configure do |config|
     begin
       @driver = SpecSupport.screener_driver
     rescue => e
+      puts "Problem creating driver"
       puts e
+      exit 1
     end
   end
 
   config.after(:example) do
-    @driver.quit
+    @driver.quit if @driver
     @driver = nil
   end
 end

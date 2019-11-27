@@ -7,13 +7,15 @@ module SpecSupport
     end
 
     def screener_driver
+      puts "Creating new Screener Driver"
+      puts "  API Key: #{ENV["SCREENER_API_KEY"][1..3]}"
       screener_caps = {
         browserName: "Chrome",
         screener: {
           name: "Twitch Index Page - Chrome",
           build: ENV["TRAVIS_BUILD_NUMBER"] || "#{ENV["TRAVIS_BRANCH"]}_#{ENV["TRAVIS_JOB_NUMBER"]}",
           resolution: "1280x1024",
-          apiKey: "c9ac4870-9f8f-4340-913d-9b6a0e6f67f3",
+          apiKey: "#{ENV["SCREENER_API_KEY"]}",
           group: "5dd61360d5a0b38e6404a93d"
         }
       }
@@ -23,7 +25,6 @@ module SpecSupport
         :url => "https://hub.screener.io/wd/hub", 
         :desired_capabilities => screener_caps
       )
-
     end
   end
 end
