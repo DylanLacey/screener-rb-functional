@@ -26,7 +26,7 @@ RSpec.configure do |config|
   end
 
   config.after(:example) do
-    @driver.quit
+    @driver.quit if @driver
     @driver = nil
   end
 end
