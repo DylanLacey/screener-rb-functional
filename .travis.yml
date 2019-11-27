@@ -12,8 +12,8 @@ before_script:
 - "./ngrok http 3000 > /dev/null &"
 - sleep 5
 - NGROK_URL=$(curl -s localhost:4040/api/tunnels/command_line | jq --raw-output .public_url)
-after_script: "-./screener-ci.sh $SCREENER_API_KEY $SCREENER_GROUP $BUILD_NUMBER --repo
-  $GITHUB_REPO_SLUG --commit $GITHUB_COMMIT_SHA"
+after_script: "-./screener-ci.sh $SCREENER_API_KEY $SCREENER_GROUP_ID $TRAVIS_BUILD_NUMBER"
 env:
   global:
+    - SCREENER_GROUP_ID=5dd61360d5a0b38e6404a93d
     secure: pV32CpAOFvjNfTK8lxFtcP7ki+Hw5k1tnrjGUy/pUmK2ch3p2+wYV4CRJBxPju7DrpB3u+qTx3CIJPKKAUDcXK/oDdKJDmUxYuVZaFfLBAWWXBDg/NAaM51HQEg6Phlumr0kuVOjQ2EqlptUJd96z31T5Xccu3svNA1mLXxJca02Z3S3gD/wFj0uQg/6y/CFk56piHvfjKivYX8OQWTsduVv4XBC/bQ9fxxJevvJ1nMm13jAqa8+1cBjeRTbU2GRSZrcx8cRLokqEUJJhauUgcBS7z8YpwhKvhAhFUS3Tj14Ywsu+zDM4LDmLiqatQ5Oi4fF0vj7H4sB3l4D7kBHCioGpygsqhZHMRwVa0z4ftY0Dt83sm9osbRVHEE5GEC4/a+/PzogEkzYwE/T3g7ZRqHrnAVk1dTo0nOIBWQx9wXjqn5QTXRj/EaHWRwxkWZErvQH3jy7xLHWCR+pS7xtWWpVDsmqnZzdkK8OQso6q0i62c48nRJB6csbXW2Qg6nGzyf8XFBkkfvxfHIk3yqfrQi0oHfYznQ5ED2kjOyT0+wjvLA/I6LbZ3Ex65JDMeRO1ru7Cbfa8utiCy6mpIi2i82L6KotUJ7ORPEKyO0L1LvE2De7WFGPT29yA2FhI/DdFwBz26ZOSJxcgRCng27uI0cUOJ572r19Psr8rYNlVEk=
