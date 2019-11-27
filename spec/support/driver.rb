@@ -25,7 +25,6 @@ module SpecSupport
         :url => "https://hub.screener.io/wd/hub", 
         :desired_capabilities => screener_caps
       )
-
     end
   end
 end
