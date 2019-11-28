@@ -29,9 +29,9 @@ RSpec.configure do |config|
     @driver.quit if @driver
     @driver = nil
     puts "Env Vars"
-    puts "  Group ID: #{ENV[SCREENER_GROUP_ID]}"
-    puts "  Build Number: #{ENV[TRAVIS_BUILD_NUMBER]}"
-    puts "  Repo Slug: #{ENV[TRAVIS_REPO_SLUG]}"
-    puts "  Commit: #{ENV[TRAVIS_PULL_REQUEST_SHA]}"
+    puts "  Group ID: #{ENV["SCREENER_GROUP_ID"]}"
+    puts "  Build Number: #{ENV["TRAVIS_BUILD_NUMBER"]}"
+    puts "  Repo Slug: #{ENV["TRAVIS_REPO_SLUG"]}"
+    puts "  Commit: #{ENV["TRAVIS_PULL_REQUEST_SHA"]}"
   end
 end
