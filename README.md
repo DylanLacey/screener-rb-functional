@@ -11,5 +11,3 @@ Screener can be integrated into a standard functional test suite, which is what 
 # How?
 
 Computers.  Always Computers.  Never Goats.
-
-Unless...  No.
