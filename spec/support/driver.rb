@@ -11,9 +11,9 @@ module SpecSupport
       puts "  API Key: #{ENV["SCREENER_API_KEY"][1..3]}"
       screener_caps = {
         browserName: "Chrome",
+        build: ENV["TRAVIS_BUILD_NUMBER"] || "#{ENV["TRAVIS_BRANCH"]}_#{ENV["TRAVIS_JOB_NUMBER"]}",
         screener: {
           name: "Twitch Index Page - Chrome",
-          build: ENV["TRAVIS_BUILD_NUMBER"] || "#{ENV["TRAVIS_BRANCH"]}_#{ENV["TRAVIS_JOB_NUMBER"]}",
           resolution: "1280x1024",
           apiKey: "#{ENV["SCREENER_API_KEY"]}",
           group: "5dd61360d5a0b38e6404a93d"
